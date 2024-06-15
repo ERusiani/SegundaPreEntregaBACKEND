@@ -1,0 +1,15 @@
+[
+	{
+		"title": "Porta Sahumerio",
+		"description": "portra sahmerio con pose de yoga",
+		"price": "6500",
+		"stock": "65",
+		"id": 1
+	},
+	{
+		"title": "Pelota",
+		"description": "pelota de basketball",
+		"price": "34",
+		"id": 2
+	}
+]

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<h1>Agregar Productos</h1>
+
+<form id="form">
+    <label>Título</label>
+    <input name="title">
+    <br/>
+    <label>Descripción</label>
+    <input name="description">
+    <br/>
+    <label>Precio</label>
+    <input name="price">
+    <br/>
+    <label>Enviar </label>
+    <input type="submit" >
+</form>
+
+<h1>Productos</h1>
+
+<ul>
+        {{#each products}}
+        <li>
+            Title:<strong>{{this.title}}</strong>
+            <br>
+            Description:{{this.description}}
+            <br>
+            Price:${{this.price}}
+            <br>
+            <input type="button" value="Delete" prodId="{{this.id}}" class="deleteButton">
+        </li>
+        <br>
+    {{/each}}
+</ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realtimeproducts.js"></script>
+
+
+</body>
+</html>
